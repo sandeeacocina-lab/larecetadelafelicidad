@@ -1,0 +1,318 @@
+[
+ {
+  "slug": "chocolate",
+  "title": "Chocolate",
+  "tagline": {
+   "es": "63 recetas irresistibles con el ingrediente estrella",
+   "en": "63 irresistible recipes starring chocolate"
+  },
+  "cover": "https://larecetadelafelicidad.com/wp-content/uploads/2016/02/portada-chocolate-small.jpg",
+  "buy": "https://www.amazon.es/dp/8403500769",
+  "note": {
+   "es": "(en pre-venta actualmente. Sale el 15/10/2015)",
+   "en": ""
+  },
+  "ficha": {
+   "es": "Tapa dura: 192 páginas<br>Editor: El Pais Aguilar; Edición: 001 (15 de octubre de 2015)<br>Idioma: Español<br>ISBN-10: 8403500769<br>ISBN-13: 978-8403500761<br>Precio: 21,90 € (Actualmente con un 5% de descuento)",
+   "en": "Hardcover: 192 pages<br>Publisher: El Pais Aguilar; Edition: 001 (October 15, 2015)<br>Language: Spanish<br>ISBN-10: 8403500769<br>ISBN-13: 978-8403500761<br>Price: 21,90 € (currently 5% off)"
+  },
+  "synopsis": {
+   "es": [
+    "\"El chocolate es el gran capricho al que nadie puede resistirse porque despierta nuestros sentidos y alimenta nuestras emociones -el aroma de una taza de chocolate, la textura de una delicada mousse o el crujir de un perfecto macaron. Ahora, gracias a este delicioso recetario de Sandra Mangas, podrás disfrutar de los dulces de chocolate más seductores al paladar en tu propia casa.",
+    "Todos los lectores de La Receta de la Felicidad, el blog de cocina de Sandra Mangas, saben que el ingrediente favorito de su autora es el chocolate, con el que puede hacer auténticas maravillas reposteras. En este libro encontrarás 63 apetitosas recetas de postres y caprichos dulces en las que el chocolate es el protagonista absoluto, y que cumplen los principios fundamentales de Sandra: tener una elaboración sencilla y asequible al repostero aficionado, y una presentación original y fuera de lo común.",
+    "Además de las recetas que se han hecho clásicas en el blog de Sandra -el falso huevo poché, el turrón Dulcey®, las berlinas rellenas o la tarta sencilla sin huevo ni lácteos- hay otras tantas inéditas que sin duda sorprenderán al lector por su creatividad y facilidad, como los bombones Lego®, el chocoflan o la tarta Maltesers®-. También hay un completo apartado en el que se explican las bases para dominar las técnicas esenciales del chocolate, sin pretender ser un maestro repostero -fundir, atemperar, moldear, bañar...- así como las herramientas, los tipos de chocolate y los otros ingredientes que combinan y armonizan con él -mantequilla, azúcar, frutos secos o cremas.",
+    "¡Piérdele el miedo al ingrediente estrella de la repostería! Este es el perfecto libro para iniciarte en la elaboración de chocolates sin complicaciones y con unos resultados de estrella Michelín.\""
+   ],
+   "en": [
+    "“Chocolate is the one indulgence nobody can resist: it awakens our senses and feeds our emotions — the aroma of a cup of hot chocolate, the texture of a delicate mousse, the snap of a perfect macaron. With this delicious book by Sandra Mangas you can now enjoy the most seductive chocolate sweets at home.",
+    "Readers of La Receta de la Felicidad know that chocolate is Sandra’s favourite ingredient. This book gathers 63 tempting recipes for desserts and sweet treats where chocolate is the absolute star, all following Sandra’s principles: simple preparation within reach of the home baker, and an original, out-of-the-ordinary presentation.",
+    "Alongside blog classics — the faux poached egg, Dulcey® turrón, filled berliners or the simple egg-free, dairy-free cake — there are brand-new recipes such as Lego® bonbons, chocoflan or the Maltesers® cake. A full section covers the essential chocolate techniques — melting, tempering, moulding, coating — plus tools, chocolate types and the ingredients that pair best with it.",
+    "Lose your fear of baking’s star ingredient! The perfect book to start making chocolate treats without complications — with Michelin-star results.”"
+   ]
+  },
+  "gallery": [
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2015/09/Tarta-Maltesers-IMG_9762-blog.jpg",
+    "cap": "Tarta Maltesers",
+    "capEn": "Tarta Maltesers"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2015/09/Berlinas-IMG_95971.jpg",
+    "cap": "Berlinas de nutella",
+    "capEn": "Berlinas de nutella"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2015/09/Galletas-de-chocolate-y-barquillo-IMG_87211.jpg",
+    "cap": "Huesitos caseros",
+    "capEn": "Huesitos caseros"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2015/09/Kinder-Bueno-blog-IMG_88471.jpg",
+    "cap": "Kinder Bueno Casero",
+    "capEn": "Kinder Bueno Casero"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2015/09/Selva-negra-IMG_92431.jpg",
+    "cap": "Selva negra",
+    "capEn": "Selva negra"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2015/09/Tarta-trufa-IMG_86691.jpg",
+    "cap": "Tarta Trufa",
+    "capEn": "Tarta Trufa"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2015/09/Tiernos-chocolate-IMG_01341.jpg",
+    "cap": "Tiernos de chocolate",
+    "capEn": "Tiernos de chocolate"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2015/09/Trufas-IMG_86391.jpg",
+    "cap": "Trufas",
+    "capEn": "Trufas"
+   }
+  ],
+  "latest": true
+ },
+ {
+  "slug": "con-la-comida-s-se-juega",
+  "title": "Con la comida Sí se juega",
+  "tagline": {
+   "es": "20 recetas para cocinar y jugar con niños",
+   "en": "20 recipes to cook and play with kids"
+  },
+  "cover": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/71S1jIMSjFL.jpg",
+  "buy": "https://www.amazon.es/dp/8437200911",
+  "note": {
+   "es": "",
+   "en": ""
+  },
+  "ficha": {
+   "es": "Tapa dura: 96 páginas y 20 recetas<br>Editor: ALTEA; Edición: 001 (1 de octubre de 2014)<br>Idioma: Español<br>ISBN-10: 8437200911<br>ISBN-13: 978-8437200910<br>Precio: 12,90 €",
+   "en": "Hardcover: 96 pages and 20 recipes<br>Publisher: ALTEA; Edition: 001 (October 1, 2014)<br>Language: Spanish<br>ISBN-10: 8437200911<br>ISBN-13: 978-8437200910<br>Price: 12,90 €"
+  },
+  "synopsis": {
+   "es": [
+    "\"¿Qué tal un tarde de horno? O ¿mejor hacemos helados? 20 sencillas recetas con resultados muy vistosos que harán más especiales las fiestas y celebraciones infantiles. Ideales para que los niños aprendan a cocinar y se diviertan con sus padres mientras lo hacen, porque#¡en la cocina SÍ se juega!\""
+   ],
+   "en": [
+    "“How about an afternoon of baking? Or shall we make ice cream? 20 simple recipes with eye-catching results to make children’s parties and celebrations extra special. Perfect for kids to learn to cook and have fun with their parents — because in the kitchen, playing with food IS allowed!”"
+   ]
+  },
+  "gallery": [
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/IMG_5279-mail.jpg",
+    "cap": "Crema de guisantes para dinosaurios",
+    "capEn": "Dinosaurs' sweet peas soup"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/IMG_5401-mail.jpg",
+    "cap": "Polos Colajet",
+    "capEn": "Colajet ice pops"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/IMG_5462-mail.jpg",
+    "cap": "Sandwich Puzzle",
+    "capEn": "Sandwich Puzzle"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/IMG_6707.jpg",
+    "cap": "Ensalada de frutas en cuenco de chocolate",
+    "capEn": "Fruit salad in chocolate bowl"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/IMG_7022.jpg",
+    "cap": "Empanadillas de pescado",
+    "capEn": "Fish mini pies"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/IMG_7100.jpg",
+    "cap": "Tarta arcoiris",
+    "capEn": "Tarta arcoiris"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/IMG_7513.jpg",
+    "cap": "Hummus con zanahorias",
+    "capEn": "Hummus with baby carrots"
+   }
+  ],
+  "latest": false
+ },
+ {
+  "slug": "polos-y-helados",
+  "title": "Polos y helados",
+  "tagline": {
+   "es": "50 delicias heladas para todo el año",
+   "en": "50 frozen treats for every day of the year"
+  },
+  "cover": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/81rBvAwEbvL._SL1500_.jpg",
+  "buy": "https://www.amazon.es/dp/8403513917",
+  "note": {
+   "es": "",
+   "en": ""
+  },
+  "ficha": {
+   "es": "Tapa dura: 136 páginas y 50 recetas<br>Editor: El País-Aguilar; Edición: 1 (14 de mayo de 2014)<br>Idioma: Español<br>ISBN-10: 8403513917<br>ISBN-13: 978-8403513914<br>Precio: 13,90 €",
+   "en": "Hardcover: 136 pages and 50 recipes<br>Publisher: El País-Aguilar; Edition: 1 (May 14, 2014)<br>Language: Spanish<br>ISBN-10: 8403513917<br>ISBN-13: 978-8403513914<br>Price: 13,90 €"
+  },
+  "synopsis": {
+   "es": [
+    "\"Sandra Mangas, la bloguera y autora de Las recetas de la felicidad, nos propone un nuevo libro, esta vez para la colección Chic&amp;Delicious. Los amantes de los helados están de enhorabuena porque en este libro encontrarán 50 originales recetas para disfrutar de su placer preferido todos los días del año. En él nos enseña a hacer en casa y de manera fácil, estas delicias heladas. Refrescantes polos y helados llenos de sabor para disfrutar la especialidad de la autora: momentos de felicidad.\""
+   ],
+   "en": [
+    "“Sandra Mangas, the blogger behind La Receta de la Felicidad, brings a new book to the Chic&Delicious collection. Ice-cream lovers are in luck: 50 original recipes to enjoy their favourite treat every day of the year, showing how to make these frozen delights easily at home. Refreshing ice pops and ice creams full of flavour to enjoy the author’s specialty: moments of happiness.”"
+   ]
+  },
+  "gallery": [
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/IMG_2254m.jpg",
+    "cap": "Polos de Mojito",
+    "capEn": "Polos de Mojito"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/IMG_2296-m.jpg",
+    "cap": "Polos de violeta",
+    "capEn": "Polos de violeta"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/IMG_2790.jpg",
+    "cap": "Helados Lápiz",
+    "capEn": "Helados Lápiz"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/IMG_3372.jpg",
+    "cap": "Polos de café bombón",
+    "capEn": "Polos de café bombón"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/IMG_3503-m.jpg",
+    "cap": "Polos de piña colada",
+    "capEn": "Polos de piña colada"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/IMG_3925-m.jpg",
+    "cap": "Mini conos",
+    "capEn": "Mini conos"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/IMG_4346-m.jpg",
+    "cap": "Helado de tarta de zanahorias",
+    "capEn": "Helado de tarta de zanahorias"
+   }
+  ],
+  "latest": false
+ },
+ {
+  "slug": "happy-cupcakes",
+  "title": "Happy Cupcakes",
+  "tagline": {
+   "es": "Caja con 14 recetas paso a paso y 24 moldes",
+   "en": "Box with 14 step-by-step recipes and 24 molds"
+  },
+  "cover": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/21147062013Grandes.jpg",
+  "buy": "https://www.amazon.es/dp/8415807244",
+  "note": {
+   "es": "",
+   "en": ""
+  },
+  "ficha": {
+   "es": "Tapa dura: 64 páginas y 14 recetas con paso a paso<br>Editor: IMAGINARIUM-CIRCULO (14 de noviembre de 2013)<br>Idioma: Español<br>ISBN-10: 8415807244<br>ISBN-13: 978-8415807247<br>Precio: 19,90 €",
+   "en": "Hardcover: 64 pages and 14 step-by-step recipes<br>Publisher: IMAGINARIUM-CIRCULO (November 14, 2013)<br>Language: Spanish<br>ISBN-10: 8415807244<br>ISBN-13: 978-8415807247<br>Price: 19,90 €"
+  },
+  "synopsis": {
+   "es": [
+    "\"Esta irresistible caja contiene todo lo que necesitas para preparar deliciosos cupcakes: 24 moldes chulísimos para hornear directamente y un libro de recetas muy ricas y originales.<br>A partir de 4 años. Mmm... ¡pero qué pinta tan apetitosa tienen los cupcakes! Y son muy fáciles de hacer: huevos, harina, azúcar, una pizca de imaginación, unas pocas risas y algún ingrediente sorpresa, supernatural, de esos que Sandra incluye siempre en sus recetas. ¡Y hay para todos los gustos! Rellenos y recubiertos, dulces y salados, tradicionales e innovadores... Hoy prepararemos happy cupcakes de cumpleaños, para ese cumple tan especial; mañana, magdalenas de palomitas para una buena sesión de cine; pasado, minicupcakes de plátano para una fiesta, en plan sofisticado... Pero los hay de manzana, de helado, de «huevo frito»... Hornear y decorar originales magdalenas es una actividad fantástica, una forma deliciosa de obsequiar a la familia y a los amigos, y también de recordar que siempre hay algo que celebrar.<br>Para Sandra Mangas, la autora del libro Las recetas de la felicidad, cocina y felicidad son sinónimos. No es médico, pero se dedica a escribir recetas que hacen felices a los demás. ¿Será por eso que su blog (larecetadelafelicidad.com) tiene miles y miles de seguidores?<br>CONTENIDO:<br>• Una caja de 24 cm de diámetro de cartón duro decorado.<br>• 24 moldes de material reciclable.<br>• Un libro de cartoné (16,5 x 16,5 cm) de 64 páginas.\""
+   ],
+   "en": [
+    "“This irresistible box contains everything you need to make delicious cupcakes: 24 gorgeous baking cups and a book of original, tasty recipes. Ages 4 and up. Sweet and savoury, filled and frosted, traditional and inventive — birthday happy cupcakes for that special day, popcorn muffins for movie night, banana mini-cupcakes for a party… Baking and decorating cupcakes is a fantastic activity and a delicious way to treat family and friends — and to remember there is always something to celebrate. Contents: a 24 cm decorated hard-cardboard box, 24 recyclable moulds, and a 64-page hardback book (16.5 × 16.5 cm).”"
+   ]
+  },
+  "gallery": [
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/cupcake-helado-mail.jpg",
+    "cap": "Cupcakes Helado",
+    "capEn": "Cupcakes Helado"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/cupcake-huevo-frito-mail.jpg",
+    "cap": "Cupcakes Huevo Frito",
+    "capEn": "Cupcakes Huevo Frito"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/cupcake-zanahoria-mail.jpg",
+    "cap": "Cupcakes de zanahoria",
+    "capEn": "Cupcakes de zanahoria"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/Cupcakes-Seta-mail-IMG_0589.jpg",
+    "cap": "Cupcakes salados",
+    "capEn": "Cupcakes salados"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/Rainbow-cupcakes-mail.jpg",
+    "cap": "Cupcakes arcoiris",
+    "capEn": "Cupcakes arcoiris"
+   }
+  ],
+  "latest": false
+ },
+ {
+  "slug": "las-recetas-de-la-felicidad",
+  "title": "Las recetas de la felicidad",
+  "tagline": {
+   "es": "77 recetas originales para momentos especiales",
+   "en": "77 original recipes for special moments"
+  },
+  "cover": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/81P9R723dPL._SL1500_.jpg",
+  "buy": "https://www.amazon.es/dp/8403513054",
+  "note": {
+   "es": "",
+   "en": ""
+  },
+  "ficha": {
+   "es": "Tapa dura: 176 páginas y 77 recetas<br>Editor: El País-Aguilar; Edición: 1 (16 de octubre de 2013)<br>Idioma: Español<br>ISBN-10: 8403513054<br>ISBN-13: 978-8403513051<br>Precio: 16,90 €",
+   "en": "Hardcover: 176 pages and 77 recipes<br>Publisher: El País-Aguilar; Edition: 1 (October 16, 2013)<br>Language: Spanish<br>ISBN-10: 8403513054<br>ISBN-13: 978-8403513051<br>Price: 16,90 €"
+  },
+  "synopsis": {
+   "es": [
+    "\"Este libro no trata de hacer cocina para el día a día, casera ni para llevar en la fiambrera, es un libro dedicado a una cocina original para momentos especiales y de diversión y con un énfasis especial en la presentación de los platos. El lector podrá encontrar 77 recetas diferentes divididas entre dulces y saladas. Entre ellas hay algunos de los platos más famosos del blog de Sandra, como el brownie en cáscara de huevo, y otras totalmente originales especialmente cocinadas para este libro. Además, Sandra da trucos, consejos y asesora sobre las mejores herramientas para cocinar, y pone en un mapa aquellas tiendas en las que poder comprar los ingredientes de la felicidad. Algunas recetas del libro son: - un conejo dentro de un bizcocho - una ensalada en un cuenco que se come - una piñata en forma de cupcake - una tortilla cocinada dentro del pan - un brownie dentro de la cáscara de un huevo... Todas estas recetas y muchas más están en el primer libro de recetas de Sandra Mangas, la autora del célebre blog www.larecetadelafelicidad.com\""
+   ],
+   "en": [
+    "“This is not a book of everyday home cooking: it is devoted to original dishes for special, fun occasions, with a strong emphasis on presentation. Inside you will find 77 recipes, both sweet and savoury — some of the most famous dishes from Sandra’s blog, like the brownie baked in an eggshell, and others created especially for this book. Sandra also shares tricks, advice on the best kitchen tools, and a map of shops where to buy the ingredients of happiness. Some recipes: a rabbit inside a cake, a salad in an edible bowl, a piñata shaped like a cupcake, an omelette cooked inside bread, a brownie inside an eggshell… All this and much more in the first cookbook by Sandra Mangas.”"
+   ]
+  },
+  "gallery": [
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/bizcocho-marmolado-IMG_5348.jpg",
+    "cap": "Bizcocho marmolado",
+    "capEn": "Bizcocho marmolado"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/Brazo-de-gitano-IMG_6915.jpg",
+    "cap": "Arctic Roll",
+    "capEn": "Arctic Roll"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/cremadezahanoriaIMG_9151.jpg",
+    "cap": "Crema de zanahorias",
+    "capEn": "Crema de zanahorias"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/hojaldres-de-patata-y-albahaca-IMG_7704.jpg",
+    "cap": "Hojaldre de patata y albahaca",
+    "capEn": "Hojaldre de patata y albahaca"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/Huevos-mousse-de-chocolate-IMG_5921.jpg",
+    "cap": "Huevos rellenos de mousse de chocolate",
+    "capEn": "Huevos rellenos de mousse de chocolate"
+   },
+   {
+    "src": "https://larecetadelafelicidad.com/wp-content/uploads/2014/05/Cheesecake-bars-1.jpg",
+    "cap": "Bombón cheesecake",
+    "capEn": "Bombón cheesecake"
+   }
+  ],
+  "latest": false
+ }
+]
