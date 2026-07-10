@@ -8,6 +8,7 @@
 <body>
 <x-dc>
 <helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet">
 <style>
@@ -50,6 +51,16 @@ a:hover { color: #4a4a4a; text-decoration: underline; }
 .rx .consejos ul { margin: 10px 0 0; padding-left: 18px; }
 .rx .consejos li { margin-bottom: 8px; }
 @keyframes marquee-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (max-width: 760px) {
+  .resp-2col, .resp-about, .resp-book { grid-template-columns: 1fr !important; }
+  .resp-strip { flex-direction: column !important; gap: 24px !important; padding: 28px 20px !important; }
+  .resp-hero { height: 230px !important; }
+  .resp-hero-inner { padding: 0 40px !important; }
+  .rx .duo, .rx .gal { grid-template-columns: 1fr !important; }
+  .rx img.alignleft, .rx img.alignright { float: none !important; width: 100% !important; margin: 0 0 18px !important; display: block !important; }
+  .rx .cardgrid { grid-template-columns: 1fr !important; }
+  .rx { text-align: left !important; }
+}
 .rx iframe { max-width: 100%; display: block; margin: 24px auto; border: none; }
 .rx .gal4 { grid-template-columns: repeat(4, 1fr); align-items: start; }
 .rx .gal4 figure:last-child:nth-child(odd) { grid-column: auto; }
@@ -119,7 +130,7 @@ a:hover { color: #4a4a4a; text-decoration: underline; }
 
       <!-- Hero slider -->
       <div style="max-width: 1100px; margin: 40px auto 0; padding: 0 24px;">
-        <div onClick="{{ heroOpen }}" style="cursor: pointer; position: relative; height: 380px; overflow: hidden; background: {{ heroSolid }};">
+        <div onClick="{{ heroOpen }}" class="resp-hero" style="cursor: pointer; position: relative; height: 380px; overflow: hidden; background: {{ heroSolid }};">
           <div role="img" aria-label="{{ heroTitle }}" style="width: 100%; height: 100%; background-position: {{ heroPos }}; background-size: {{ heroFit }}; background-repeat: no-repeat; transition: background-image 0.6s ease; background-image: {{ heroBg }};"></div>
           <div style="position: absolute; inset: 14px; border: 1px solid rgba(255,255,255,0.85); pointer-events: none;"></div>
           <div onClick="{{ heroPrev }}" style="position: absolute; left: 26px; top: 50%; transform: translateY(-50%); font-family: 'Josefin Sans', sans-serif; font-size: 46px; font-weight: 300; color: #ffffff; text-shadow: 0 1px 8px rgba(0,0,0,0.6); padding: 10px 14px; user-select: none;" style-hover="transform: translateY(-50%) scale(1.15);">&#8249;</div>
@@ -128,8 +139,8 @@ a:hover { color: #4a4a4a; text-decoration: underline; }
       </div>
 
       <!-- Book promo section -->
-      <div id="book-promo" style="max-width: 1100px; margin: 44px auto 0; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: stretch;">
-        <div style="background: #e7e3da; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.25) 0px, rgba(255,255,255,0.25) 1px, transparent 1px, transparent 3px), repeating-linear-gradient(90deg, rgba(160,150,130,0.08) 0px, rgba(160,150,130,0.08) 1px, transparent 1px, transparent 3px); padding: 34px; display: flex; align-items: center; gap: 30px;">
+      <div id="book-promo" class="resp-2col" style="max-width: 1100px; margin: 44px auto 0; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: stretch;">
+        <div class="resp-strip" style="background: #e7e3da; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.25) 0px, rgba(255,255,255,0.25) 1px, transparent 1px, transparent 3px), repeating-linear-gradient(90deg, rgba(160,150,130,0.08) 0px, rgba(160,150,130,0.08) 1px, transparent 1px, transparent 3px); padding: 34px; display: flex; align-items: center; gap: 30px;">
           <img src="https://larecetadelafelicidad.com/wp-content/uploads/2016/02/portada-chocolate-small.jpg" alt="Libro Chocolate" style="width: 150px; height: auto; display: block; border: 5px solid #ffffff; box-shadow: 0 3px 14px rgba(0,0,0,0.18);">
           <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; flex: 1; text-align: center;">
             <div style="font-family: 'Josefin Sans', sans-serif; font-weight: 400; font-size: 30px; letter-spacing: 0.2em; text-transform: uppercase; color: #4a4a4a;">Chocolate</div>
@@ -194,7 +205,7 @@ a:hover { color: #4a4a4a; text-decoration: underline; }
             </sc-if>
           </sc-for>
         </div>
-        <div onClick="{{ openAbout }}" style="cursor: pointer; margin-top: 70px; display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: center; background: #e7e3da; padding: 34px;">
+        <div onClick="{{ openAbout }}" class="resp-about" style="cursor: pointer; margin-top: 70px; display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: center; background: #e7e3da; padding: 34px;">
           <div style="aspect-ratio: 3 / 4; overflow: hidden;">
             <img src="https://larecetadelafelicidad.com/wp-content/uploads/2011/06/IMG_0674peqbn.jpg" alt="Sandra Mangas" style="width: 100%; height: 100%; object-fit: cover; display: block;">
           </div>
@@ -250,7 +261,7 @@ a:hover { color: #4a4a4a; text-decoration: underline; }
         </div>
 
         <!-- Latest book strip -->
-        <div style="margin-top: 44px; background: #e7e3da; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.25) 0px, rgba(255,255,255,0.25) 1px, transparent 1px, transparent 3px), repeating-linear-gradient(90deg, rgba(160,150,130,0.08) 0px, rgba(160,150,130,0.08) 1px, transparent 1px, transparent 3px); padding: 40px; display: flex; align-items: center; gap: 44px;">
+        <div class="resp-strip" style="margin-top: 44px; background: #e7e3da; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.25) 0px, rgba(255,255,255,0.25) 1px, transparent 1px, transparent 3px), repeating-linear-gradient(90deg, rgba(160,150,130,0.08) 0px, rgba(160,150,130,0.08) 1px, transparent 1px, transparent 3px); padding: 40px; display: flex; align-items: center; gap: 44px;">
           <div role="img" aria-label="{{ latestTitle }}" onClick="{{ latestOpen }}" style="width: 190px; aspect-ratio: 3 / 4; flex-shrink: 0; border: 5px solid #ffffff; box-shadow: 0 3px 14px rgba(0,0,0,0.18); cursor: pointer; background-size: cover; background-position: center; background-image: {{ latestCoverBg }};"></div>
           <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; flex: 1; text-align: center;">
             <div style="font-family: 'Josefin Sans', sans-serif; font-weight: 300; font-size: 15px; letter-spacing: 0.2em; text-transform: uppercase; color: #4a5a70;">{{ bookLine }}</div>
@@ -295,7 +306,7 @@ a:hover { color: #4a4a4a; text-decoration: underline; }
           <a href="{{ bkBuy }}" target="_blank" style="font-family: 'Josefin Sans', sans-serif; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #f0ede6; background: #4d3f35; padding: 13px 26px 11px; display: inline-block;" style-hover="background: #382d25; color: #ffffff; text-decoration: none;">{{ bookBuy }}</a>
         </div>
 
-        <div style="margin-top: 48px; display: grid; grid-template-columns: 300px 1fr; gap: 48px; align-items: start;">
+        <div class="resp-book" style="margin-top: 48px; display: grid; grid-template-columns: 300px 1fr; gap: 48px; align-items: start;">
           <div role="img" aria-label="{{ bkTitle }}" style="width: 100%; aspect-ratio: 3 / 4; border: 6px solid #ffffff; box-sizing: border-box; box-shadow: 0 4px 18px rgba(0,0,0,0.18); background-size: cover; background-position: center; background-image: {{ bkCoverBg }};"></div>
           <div class="rx" style="text-align: left;">
             <div style="font-family: 'Josefin Sans', sans-serif; font-size: 12.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #9b8468; margin-bottom: 12px;">{{ fichaLabel }}</div>
@@ -337,7 +348,7 @@ a:hover { color: #4a4a4a; text-decoration: underline; }
         <div class="rx" style="margin-top: 44px;">{{ pageEl }}</div>
 
         <sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 44px; align-items: start;">
+          <div class="resp-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 44px; align-items: start;">
             <div style="display: flex; flex-direction: column; gap: 16px;">
               <input value="{{ cName }}" onChange="{{ setName }}" placeholder="{{ phName }}" style="background: #f2f0eb; border: none; padding: 16px 18px; font-family: 'Lato', sans-serif; font-size: 15px; color: #4a4a4a;">
               <input value="{{ cEmail }}" onChange="{{ setEmail }}" placeholder="{{ phEmail }}" style="background: #f2f0eb; border: none; padding: 16px 18px; font-family: 'Lato', sans-serif; font-size: 15px; color: #4a4a4a;">
