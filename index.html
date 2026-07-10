@@ -54,8 +54,12 @@ a:hover { color: #4a4a4a; text-decoration: underline; }
 @media (max-width: 760px) {
   .resp-2col, .resp-about, .resp-book { grid-template-columns: 1fr !important; }
   .resp-strip { flex-direction: column !important; gap: 24px !important; padding: 28px 20px !important; }
-  .resp-hero { height: 230px !important; }
-  .resp-hero-inner { padding: 0 40px !important; }
+  .resp-hero { height: auto !important; aspect-ratio: 1100 / 380; }
+  .nav-burger { display: block !important; }
+  .nav-links { display: none !important; }
+  .nav-links.open { display: flex !important; flex-direction: column !important; width: 100%; align-items: stretch !important; text-align: center; padding-bottom: 10px; }
+  .nav-links.open a { padding: 13px 14px !important; border-top: 1px solid #55534c; }
+  .nav-sep { display: none !important; }
   .rx .duo, .rx .gal { grid-template-columns: 1fr !important; }
   .rx img.alignleft, .rx img.alignright { float: none !important; width: 100% !important; margin: 0 0 18px !important; display: block !important; }
   .rx .cardgrid { grid-template-columns: 1fr !important; }
@@ -107,15 +111,18 @@ a:hover { color: #4a4a4a; text-decoration: underline; }
   <!-- Chalkboard nav -->
   <nav style="margin-top: 34px; background: linear-gradient(180deg, #45443f 0%, #3b3a36 45%, #43423d 100%); box-shadow: inset 0 0 40px rgba(0,0,0,0.35);">
     <div style="max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0;">
+      <button onClick="{{ toggleNav }}" class="nav-burger" style="display: none; background: none; border: none; cursor: pointer; color: #cfcabf; font-family: 'Josefin Sans', sans-serif; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; padding: 17px 10px 15px;">&#9776; {{ menuLabel }}</button>
+      <div class="nav-links {{ navOpenClass }}" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center;">
       <a href="#" onClick="{{ goHome }}" style="font-family: 'Josefin Sans', sans-serif; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: #cfcabf; padding: 19px 14px 16px;" style-hover="color: #ffffff; text-decoration: none;">{{ navHome }}</a>
-      <span style="color: #6b6a63;">|</span>
-      <a href="#" onClick="{{ goHome }}" style="font-family: 'Josefin Sans', sans-serif; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: #cfcabf; padding: 19px 14px 16px;" style-hover="color: #ffffff; text-decoration: none;">{{ navRecipes }}</a>
-      <span style="color: #6b6a63;">|</span>
+      <span class="nav-sep" style="color: #6b6a63;">|</span>
+      <a href="#" onClick="{{ openArchiveAll }}" style="font-family: 'Josefin Sans', sans-serif; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: #cfcabf; padding: 19px 14px 16px;" style-hover="color: #ffffff; text-decoration: none;">{{ navRecipes }}</a>
+      <span class="nav-sep" style="color: #6b6a63;">|</span>
       <a href="#" onClick="{{ openAbout }}" style="font-family: 'Josefin Sans', sans-serif; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: #cfcabf; padding: 19px 14px 16px;" style-hover="color: #ffffff; text-decoration: none;">{{ navAbout }}</a>
-      <span style="color: #6b6a63;">|</span>
+      <span class="nav-sep" style="color: #6b6a63;">|</span>
       <a href="#" onClick="{{ openBooks }}" style="font-family: 'Josefin Sans', sans-serif; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: #cfcabf; padding: 19px 14px 16px;" style-hover="color: #ffffff; text-decoration: none;">{{ navBooks }}</a>
-      <span style="color: #6b6a63;">|</span>
+      <span class="nav-sep" style="color: #6b6a63;">|</span>
       <a href="#" onClick="{{ openContact }}" style="font-family: 'Josefin Sans', sans-serif; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: #cfcabf; padding: 19px 14px 16px;" style-hover="color: #ffffff; text-decoration: none;">{{ navContact }}</a>
+      </div>
       <div style="margin-left: 26px; display: flex; gap: 4px; align-items: center; flex-shrink: 0;">
         <button onClick="{{ setEs }}" style="border: none; background: none; cursor: pointer; font-family: 'Josefin Sans', sans-serif; font-size: 12.5px; letter-spacing: 0.14em; padding: 6px 4px; color: {{ esColor }}; border-bottom: {{ esBorder }};">ES</button>
         <span style="color: #6b6a63; font-size: 12px;">/</span>
@@ -153,10 +160,10 @@ a:hover { color: #4a4a4a; text-decoration: underline; }
             <img src="https://larecetadelafelicidad.com/wp-content/uploads/2016/03/mis-libros-sandeea.png" alt="Mis libros" style="height: 58px; width: auto;">
             <span style="font-family: 'Josefin Sans', sans-serif; font-weight: 300; font-size: 16px; letter-spacing: 0.16em; text-transform: uppercase; color: #4a5a70;">{{ boxBooks }}</span>
           </a>
-          <a href="#" onClick="{{ noop }}" style="flex: 1; background: #cec6b3; display: flex; align-items: center; justify-content: center; padding: 14px 24px;" style-hover="background: #c2b9a4; text-decoration: none;">
+          <a href="{{ newsMailto }}" style="flex: 1; background: #cec6b3; display: flex; align-items: center; justify-content: center; padding: 14px 24px;" style-hover="background: #c2b9a4; text-decoration: none;">
             <span style="font-family: 'Josefin Sans', sans-serif; font-weight: 300; font-size: 16px; letter-spacing: 0.16em; text-transform: uppercase; color: #4a5a70;">{{ boxNews }}</span>
           </a>
-          <a href="#" onClick="{{ noop }}" style="flex: 1; background: #c5bda9; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 14px 24px;" style-hover="background: #b9b09a; text-decoration: none;">
+          <a href="{{ madeMailto }}" style="flex: 1; background: #c5bda9; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 14px 24px;" style-hover="background: #b9b09a; text-decoration: none;">
             <span style="font-family: 'Josefin Sans', sans-serif; font-weight: 300; font-size: 16px; letter-spacing: 0.16em; text-transform: uppercase; color: #4a5a70;">{{ boxMade }}</span>
             <span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 15.5px; color: #6b6353;">{{ boxMadeSub }}</span>
           </a>
@@ -221,6 +228,44 @@ a:hover { color: #4a4a4a; text-decoration: underline; }
     </main>
   </sc-if>
 
+  <!-- ARCHIVE -->
+  <sc-if value="{{ isArchive }}" hint-placeholder-val="{{ false }}">
+    <main style="flex: 1;">
+      <div style="max-width: 1100px; margin: 0 auto; padding: 48px 24px 80px;">
+        <div style="display: flex; align-items: baseline; gap: 22px; flex-wrap: wrap;">
+          <div class="brush-lg" style="display: inline-block; font-family: 'Josefin Sans', sans-serif; font-weight: 400; font-size: 19px; letter-spacing: 0.26em; text-transform: uppercase; color: #4a4a4a; padding: 12px 34px 10px 22px;">{{ archTitle }}</div>
+          <span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 17px; color: #9a938a;">{{ archCount }}</span>
+          <sc-if value="{{ archHasFilter }}" hint-placeholder-val="{{ false }}">
+            <a href="#" onClick="{{ archClear }}" style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 17px; color: #9b8468;">{{ clearLabel }}</a>
+          </sc-if>
+        </div>
+        <div style="margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 22px;">
+          <sc-for list="{{ archTiles }}" as="tile" hint-placeholder-count="8">
+            <sc-if value="{{ tile.isPhoto }}" hint-placeholder-val="{{ true }}">
+              <div onClick="{{ tile.open }}" style="cursor: pointer; position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: #efede7;">
+                <div role="img" aria-label="{{ tile.title }}" style="width: 100%; height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat; background-image: {{ tile.bg }};"></div>
+                <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 24px; background: rgba(46,45,42,0); opacity: 0; transition: all 0.3s ease; text-align: center;" style-hover="background: rgba(46,45,42,0.55); opacity: 1;">
+                  <span style="font-family: 'Josefin Sans', sans-serif; font-weight: 300; font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; color: #ffffff;">{{ tile.title }}</span>
+                </div>
+              </div>
+            </sc-if>
+            <sc-if value="{{ tile.isText }}" hint-placeholder-val="{{ false }}">
+              <div onClick="{{ tile.open }}" style="cursor: pointer; aspect-ratio: 1 / 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 26px; box-sizing: border-box; gap: 14px; background: #f6f4ef;">
+                <div style="font-family: 'Josefin Sans', sans-serif; font-weight: 400; font-size: 16px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a5f52; line-height: 1.5;">{{ tile.title }}</div>
+                <div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 14.5px; color: #9a938a;">{{ tile.dateLabel }}</div>
+              </div>
+            </sc-if>
+          </sc-for>
+        </div>
+        <sc-if value="{{ archHasMore }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top: 44px; text-align: center;">
+            <button onClick="{{ archMore }}" style="background: #4d3f35; color: #f0ede6; border: none; cursor: pointer; font-family: 'Josefin Sans', sans-serif; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; padding: 15px 38px 13px;" style-hover="background: #382d25;">{{ moreLabel }}</button>
+          </div>
+        </sc-if>
+      </div>
+    </main>
+  </sc-if>
+
   <!-- RECIPE DETAIL -->
   <sc-if value="{{ isRecipe }}" hint-placeholder-val="{{ false }}">
     <main style="flex: 1;">
@@ -241,6 +286,9 @@ a:hover { color: #4a4a4a; text-decoration: underline; }
           </sc-for>
         </div>
 
+        <sc-if value="{{ untransNote }}" hint-placeholder-val="{{ false }}">
+          <div style="text-align: center; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; color: #9b8468; background: #f6f4ef; padding: 14px 20px; margin-bottom: 30px;">{{ untransMsg }}</div>
+        </sc-if>
         <div class="rx">{{ articleEl }}</div>
 
         <div style="margin-top: 60px; text-align: center;">
@@ -406,17 +454,14 @@ class Component extends DCLogic {
         title: es ? 'Recetas hechas con \u2026 \u00a1chocolate!' : 'Recipes made with \u2026 chocolate!',
         kicker: es ? '\u00a1Mis favoritas!' : 'My favorites!',
         align: 'flex-start', solid: '#3a3833', fit: 'cover', pos: 'center',
-        action: () => this.setState({ view: 'home', filter: 'chocolate' }),
+        action: () => this.openArchive(null, 'Recetas con chocolate'),
       },
       {
         img: 'https://larecetadelafelicidad.com/wp-content/uploads/2016/03/res-5h44-slide-LIBROS-2.jpg',
         title: es ? 'Mis libros de recetas' : 'My recipe books',
         kicker: es ? 'Informaci\u00f3n y pedidos online' : 'Info and online orders',
         align: 'flex-end', solid: '#2c2018', fit: 'cover', pos: 'center',
-        action: () => {
-          const el = document.getElementById('book-promo');
-          if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 40, behavior: 'smooth' });
-        },
+        action: () => { this.setState({ view: 'books' }); window.scrollTo(0, 0); },
       },
     ];
   }
@@ -430,6 +475,7 @@ class Component extends DCLogic {
   }
 
   componentDidMount() {
+    fetch('archive/index.json').then(r => r.json()).then(archIndex => this.setState({ archIndex }));
     fetch('pages.json').then(r => r.json()).then(pages => this.setState({ pages }));
     fetch('books.json').then(r => r.json()).then(books => this.setState({ books }));
     fetch('recipes.json').then(r => r.json()).then(recipes => {
@@ -487,8 +533,35 @@ class Component extends DCLogic {
   }
 
   open(slug) {
-    this.setState({ view: 'recipe', slug });
+    const curated = this.state.recipes.find(r => r.slug === slug);
+    this.setState({ view: 'recipe', slug, archPost: null });
     window.scrollTo(0, 0);
+    if (!curated) {
+      const rec = (this.state.archIndex || []).find(r => r.slug === slug);
+      if (rec) this.loadBatch(rec.batch).then(data => {
+        const p = data.find(x => x.slug === slug);
+        if (p && this.state.slug === slug) this.setState({ archPost: p });
+      });
+    }
+  }
+
+  loadBatch(b) {
+    this._batchCache = this._batchCache || {};
+    if (this._batchCache[b]) return Promise.resolve(this._batchCache[b]);
+    return fetch('archive/content-' + b + '.json').then(r => r.json()).then(d => { this._batchCache[b] = d; return d; });
+  }
+
+  openArchive(e, filter) {
+    if (e && e.preventDefault) e.preventDefault();
+    this.setState({ view: 'archive', archFilter: filter || null, archShow: 24, navOpen: false });
+    window.scrollTo(0, 0);
+  }
+
+  marqueeCatNames() {
+    return {
+      es: ['Recetas dulces','Recetas para ni\u00f1os','Recetas de postres','Recetas de bizcochos','Recetas con chocolate','Recetas de pan, masas y boller\u00eda','Recetas saladas','Recetas para picar','Recetas de tartas','Recetas de galletas','Recetas de Navidad'],
+      en: ['Sweet recipes','Recipes for kids','Desserts','Cakes and cookies','Chocolate recipes','Breads','Savory recipes','Snacks','Cakes','Cookies','Christmas recipes'],
+    };
   }
 
   openBook(e, bookSlug) {
@@ -530,9 +603,38 @@ class Component extends DCLogic {
     };
   }
 
+  archVals(es, lang) {
+    const idx = this.state.archIndex || [];
+    const filter = this.state.archFilter;
+    const show = this.state.archShow || 24;
+    const names = this.marqueeCatNames();
+    const filtered = filter ? idx.filter(r => r.cats.some(c => c === filter)) : idx;
+    const tiles = filtered.slice(0, show).map(r => {
+      const side = r[lang] || r.es || r.en;
+      const base = { title: side ? side.title : r.slug, open: () => this.open(r.slug) };
+      if (r.img) return { ...base, isPhoto: true, isText: false, bg: `url("${r.img}")` };
+      const [y, m, d] = r.date.split('-');
+      return { ...base, isText: true, isPhoto: false, dateLabel: this.fmtDate(r.date, lang) };
+    });
+    const fi = names.es.indexOf(filter);
+    const filterLabel = filter ? (es || fi < 0 ? filter : names.en[fi]) : null;
+    return {
+      isArchive: this.state.view === 'archive',
+      archTitle: filterLabel || (es ? 'Todas las recetas' : 'All recipes'),
+      archCount: filtered.length + (es ? ' recetas' : ' recipes'),
+      archHasFilter: !!filter,
+      archClear: e => this.openArchive(e, null),
+      archTiles: tiles,
+      archHasMore: filtered.length > show,
+      archMore: () => this.setState({ archShow: show + 24 }),
+      moreLabel: es ? 'Ver m\u00e1s recetas' : 'Load more recipes',
+      openArchiveAll: e => this.openArchive(e, null),
+    };
+  }
+
   openPage(e, pageSlug) {
     if (e && e.preventDefault) e.preventDefault();
-    this.setState({ view: 'page', pageSlug });
+    this.setState({ view: 'page', pageSlug, navOpen: false });
     window.scrollTo(0, 0);
   }
 
@@ -543,12 +645,12 @@ class Component extends DCLogic {
       navHome: 'Inicio', navRecipes: 'Recetas', navAbout: 'Sobre m\u00ed', navContact: 'Contacto',
       latest: '\u00daltimas recetas', more: 'leer m\u00e1s', back: 'Volver a las recetas',
       heroKicker: '\u00a1Mis favoritas!',
-      migrationNote: 'Vista previa de la migraci\u00f3n \u2014 11 de 476 recetas importadas. Las dem\u00e1s se a\u00f1adir\u00e1n por lotes, conservando sus enlaces originales.',
+      migrationNote: 'Archivo completo importado: 284 recetas (2008\u20132016), 182 con su versi\u00f3n en ingl\u00e9s, con sus enlaces originales.',
     } : {
       navHome: 'Home', navRecipes: 'Recipes', navAbout: 'About me', navContact: 'Contact',
       latest: 'Latest recipes', more: 'read more', back: 'Back to recipes',
       heroKicker: 'My favorites!',
-      migrationNote: 'Migration preview \u2014 11 of 476 recipes imported. The rest will be added in batches, keeping their original permalinks.',
+      migrationNote: 'Full archive imported: 284 recipes (2008\u20132016), 182 with an English version, keeping their original permalinks.',
     };
 
     const { broken, heroIdx, filter } = this.state;
@@ -578,7 +680,15 @@ class Component extends DCLogic {
         ref: node => this.hideBrokenArticleImgs(node),
       });
     }
-    const current = recipes.find(r => r.slug === slug);
+    let current = recipes.find(r => r.slug === slug);
+    let untransNote = false;
+    if (!current && this.state.archPost && this.state.archPost.slug === slug) {
+      const p = this.state.archPost;
+      const mkSide = side => side ? { title: side.title, html: side.html, cats: p.cats } : null;
+      const esSide = mkSide(p.es), enSide = mkSide(p.en);
+      untransNote = (lang === 'en' && !enSide) || (lang === 'es' && !esSide);
+      current = { slug: p.slug, date: p.date, es: esSide || enSide, en: enSide || esSide };
+    }
     let articleEl = null, recipeTitle = '', recipeDate = '', recipeCats = [];
     if (current) {
       recipeTitle = current[lang].title;
@@ -593,21 +703,23 @@ class Component extends DCLogic {
     return {
       navHome: t.navHome, navRecipes: t.navRecipes, navAbout: t.navAbout, navContact: t.navContact,
       navBooks: es ? 'Mis libros' : 'My books',
+      menuLabel: es ? 'Men\u00fa' : 'Menu',
+      navOpenClass: this.state.navOpen ? 'open' : '',
+      toggleNav: () => this.setState(s => ({ navOpen: !s.navOpen })),
       aboutKicker: es ? 'Sobre m\u00ed' : 'About me',
       aboutTeaser: es ? 'Soy SandeeA. Tengo tres hijos, un perro llamado Coco y un marido, y llevo desde 2008 cocinando recetas originales, divertidas y con mucho chocolate.' : 'I\u2019m SandeeA. I have three kids, a dog named Coco, and a husband, and since 2008 I\u2019ve been cooking up original, fun recipes with lots of chocolate.',
       aboutMore: es ? 'Conoce mi historia' : 'Read my story',
       marqueeCats: (() => {
-        const cats = es
-          ? ['Recetas dulces','Recetas para ni\u00f1os','Recetas de postres','Recetas de bizcochos','Recetas con chocolate','Recetas de pan, masas y boller\u00eda','Recetas saladas','Recetas para picar','Recetas de tartas','Recetas de galletas','Recetas de Navidad']
-          : ['Sweet recipes','Recipes for kids','Desserts','Cakes and cookies','Chocolate recipes','Breads','Savory recipes','Snacks','Cakes','Cookies','Christmas recipes'];
-        const list = [...cats, ...cats].map(label => ({
+        const names = this.marqueeCatNames();
+        const labels = es ? names.es : names.en;
+        const list = labels.map((label, i) => ({
           label,
-          open: e => { if (e && e.preventDefault) e.preventDefault(); this.setState({ view: 'home', filter: label }); },
+          open: e => this.openArchive(e, names.es[i]),
         }));
-        return list;
+        return [...list, ...list];
       })(),
       openAbout: e => this.openPage(e, 'sobre-mi'),
-      openBooks: e => { if (e && e.preventDefault) e.preventDefault(); this.setState({ view: 'books' }); window.scrollTo(0, 0); },
+      openBooks: e => { if (e && e.preventDefault) e.preventDefault(); this.setState({ view: 'books', navOpen: false }); window.scrollTo(0, 0); },
       openContact: e => this.openPage(e, 'contacto'),
       isPage: view === 'page' && !!curPage,
       pageTitle: curPage ? curPage[lang].title : '',
@@ -622,7 +734,14 @@ class Component extends DCLogic {
       phName: es ? 'Nombre' : 'Name', phEmail: es ? 'Direcci\u00f3n de correo electr\u00f3nico' : 'Email address', phMsg: es ? 'Mensaje' : 'Message',
       captchaLabel: '1 + 5 =', sendLabel: es ? 'Enviar' : 'Send',
       sent: this.state.sent, sentMsg: es ? '\u00a1Gracias! Te responder\u00e9 en cuanto pueda.' : 'Thank you! I\u2019ll get back to you soon.',
-      submit: () => { if (this.state.cCaptcha.trim() === '6') this.setState({ sent: true, cName: '', cEmail: '', cMsg: '', cCaptcha: '' }); },
+      submit: () => {
+        if (this.state.cCaptcha.trim() !== '6') return;
+        const s = this.state;
+        const subject = encodeURIComponent(es ? 'Contacto desde el blog' : 'Contact from the blog');
+        const body = encodeURIComponent((s.cName ? (es ? 'Nombre: ' : 'Name: ') + s.cName + '\n' : '') + (s.cEmail ? 'Email: ' + s.cEmail + '\n\n' : '') + s.cMsg);
+        window.location.href = 'mailto:sandeeacocina@gmail.com?subject=' + subject + '&body=' + body;
+        this.setState({ sent: true });
+      },
       contactIntro: es ? 'Si quieres hablar conmigo puedes escribirme a sandeeacocina@gmail.com.' : 'If you want to talk to me, you can write to sandeeacocina@gmail.com.',
       contactReply: es ? 'Suelo responder, sobre todo cuando la pregunta va acompa\u00f1ada de un jam\u00f3n. O puedes rellenar este formulario.' : 'I usually reply, especially when the question comes with a side of ham. Or you can fill out this form.',
       contactSocial: es ? 'Tambi\u00e9n puedes seguirme en Facebook, Twitter, Instagram\u2026 Por la calle mejor no. Sobre todo si es de noche y est\u00e1 oscuro.' : 'You can also follow me on Facebook, Twitter, Instagram\u2026 On the street, better not. Especially at night, in the dark.',
@@ -647,14 +766,19 @@ class Component extends DCLogic {
       boxBooks: es ? 'Ver todos mis libros' : 'See all my books',
       boxNews: es ? 'Suscr\u00edbete a mi newsletter' : 'Subscribe to my newsletter',
       boxMade: es ? '\u00bfHas hecho alguna receta mia?' : 'Have you made one of my recipes?',
+      newsMailto: 'mailto:sandeeacocina@gmail.com?subject=' + encodeURIComponent(es ? 'Quiero suscribirme a la newsletter' : 'I want to subscribe to the newsletter'),
+      madeMailto: 'mailto:sandeeacocina@gmail.com?subject=' + encodeURIComponent(es ? '\u00a1He hecho una de tus recetas!' : 'I made one of your recipes!'),
       boxMadeSub: es ? '\u00a1env\u00edamela y la compartir\u00e9!' : 'send it to me and I will share it!',
       isHome: view === 'home', isRecipe: view === 'recipe' && !!current,
+      untransNote,
+      untransMsg: es ? 'Esta receta a\u00fan no tiene versi\u00f3n en espa\u00f1ol \u2014 se muestra en ingl\u00e9s.' : 'This recipe has no English version yet \u2014 shown in Spanish.',
+      ...this.archVals(es, lang),
       tiles, articleEl, recipeTitle, recipeDate, recipeCats,
       esColor: es ? '#ffffff' : '#8f8a80', enColor: es ? '#8f8a80' : '#ffffff',
       esBorder: es ? '1px solid #ffffff' : '1px solid transparent',
       enBorder: es ? '1px solid transparent' : '1px solid #ffffff',
       setEs: () => this.setLang('es'), setEn: () => this.setLang('en'),
-      goHome: e => { if (e && e.preventDefault) e.preventDefault(); this.setState({ view: 'home', slug: null }); window.scrollTo(0, 0); },
+      goHome: e => { if (e && e.preventDefault) e.preventDefault(); this.setState({ view: 'home', slug: null, navOpen: false }); window.scrollTo(0, 0); },
       noop: e => { if (e && e.preventDefault) e.preventDefault(); },
     };
   }
