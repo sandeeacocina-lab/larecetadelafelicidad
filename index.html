@@ -227,7 +227,6 @@ a:hover { color: #4a4a4a; text-decoration: underline; }
           </div>
         </div>
 
-        <div style="margin-top: 40px; text-align: center; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 17px; color: #9a938a;">{{ migrationNote }}</div>
       </div>
     </main>
   </sc-if>
@@ -492,6 +491,7 @@ class Component extends DCLogic {
 
   slides(lang) {
     const es = lang === 'es';
+    const U = 'wp-content/uploads/slider/';
     return [
       {
         img: 'https://larecetadelafelicidad.com/wp-content/uploads/2016/03/res-d9nr-slide-CHOCOLATE-def.jpg',
@@ -500,6 +500,11 @@ class Component extends DCLogic {
         align: 'flex-start', solid: '#3a3833', fit: 'cover', pos: 'center',
         action: () => this.openArchive(null, 'Recetas con chocolate'),
       },
+      { img: U + 'slide-navidad.png', solid: '#f2efe9', fit: 'cover', pos: 'center', action: () => this.openArchive(null, 'Recetas de Navidad') },
+      { img: U + 'slide-halloween.png', solid: '#2a2320', fit: 'cover', pos: 'center', action: () => this.openArchive(null, 'Recetas de Halloween') },
+      { img: U + 'slide-pascua.png', solid: '#241f1c', fit: 'cover', pos: 'center', action: () => this.openArchive(null, 'Recetas de Pascua') },
+      { img: U + 'slide-helados.png', solid: '#f3f1ec', fit: 'cover', pos: 'center', action: () => this.openArchive(null, 'Recetas de polos y helados') },
+      { img: U + 'slide-ninos.png', solid: '#f0eeea', fit: 'cover', pos: 'center', action: () => this.openArchive(null, 'Recetas para ni\u00f1os') },
       {
         img: 'https://larecetadelafelicidad.com/wp-content/uploads/2016/03/res-5h44-slide-LIBROS-2.jpg',
         title: es ? 'Mis libros de recetas' : 'My recipe books',
@@ -511,7 +516,8 @@ class Component extends DCLogic {
   }
 
   heroGo(delta) {
-    this.setState(s => ({ heroIdx: (s.heroIdx + delta + 2) % 2 }));
+    const n = this.slides(this.state.lang).length;
+    this.setState(s => ({ heroIdx: (s.heroIdx + delta + n) % n }));
   }
 
   markBroken(img) {
@@ -584,8 +590,21 @@ class Component extends DCLogic {
     return (sp > 40 ? cut.slice(0, sp) : cut) + '\u2026';
   }
 
+  mergedIndex() {
+    const rawIdx = this.state.archIndex || [];
+    const curated = this.state.recipes || [];
+    const inIdx = new Set(rawIdx.map(r => r.slug));
+    const extra = curated.filter(r => !inIdx.has(r.slug)).map(r => ({
+      slug: r.slug, date: r.date, img: r.img,
+      cats: (r.es && r.es.cats) || [],
+      es: r.es ? { title: r.es.title, excerpt: this.cleanExcerpt(r.es) } : null,
+      en: r.en ? { title: r.en.title, excerpt: this.cleanExcerpt(r.en) } : null,
+    }));
+    return [...extra, ...rawIdx].sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+  }
+
   recipeNav(slug, lang, es) {
-    const idx = this.state.archIndex || [];
+    const idx = this.mergedIndex();
     const pos = idx.findIndex(r => r.slug === slug);
     if (pos < 0) return {};
     const cur = idx[pos];
@@ -748,7 +767,7 @@ class Component extends DCLogic {
 
     const { broken, heroIdx, filter } = this.state;
     const slides = this.slides(lang);
-    const hero = slides[heroIdx % 2];
+    const hero = slides[heroIdx % slides.length];
     const shown = filter
       ? recipes.filter(r => r.es.cats.some(c => c.toLowerCase() === String(filter).toLowerCase()) || r.en.cats.some(c => c.toLowerCase() === String(filter).toLowerCase()) || (filter === 'chocolate' && r.es.cats.some(c => /chocolate/i.test(c))))
       : recipes.slice(0, 8);
